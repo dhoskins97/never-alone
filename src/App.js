@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import PropTypes from 'prop-types';
+import ReactAnimatedEllipsis from 'react-animated-ellipsis';
+import logo from './neveralonelogo.png';
+
+ 
 
 function App() {
+  console.log(logo)
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={logo} alt="logo" className="logo" />
+      <div className="header">
+        I am feeling<ReactAnimatedEllipsis 
+      fontSize="1rem"
+      marginLeft="0px"
+      spacing="0rem" />
+      </div>
+      <div className="buttonContainer">
+        <div className="button">Unloved</div>
+        <div className="button">Unimportant</div>
+        <div className="button">Alone</div>
+      </div>
     </div>
   );
 }
